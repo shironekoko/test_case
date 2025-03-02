@@ -1,5 +1,5 @@
 import unittest
-from function import funnyString
+from funnyString import funnyString
 
 class TestFunnyString(unittest.TestCase):
     def test_funny_cases(self):
@@ -12,7 +12,7 @@ class TestFunnyString(unittest.TestCase):
     def test_edge_cases(self):
         self.assertEqual(funnyString("zxcvbnmlkjhgfdsa"), "Not Funny")
         self.assertEqual(funnyString("zyxw"), "Funny")
-        self.assertEqual(funnyString("axby"), "Not Funny")
+        self.assertEqual(funnyString("axby"), "Funny")  # Corrected expected result
 
     def test_additional_cases(self):
         self.assertEqual(funnyString("ab"), "Funny")
