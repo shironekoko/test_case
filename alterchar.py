@@ -1,7 +1,6 @@
 def alternatingCharacters(s):
-    d=0
-    sl=list(s)
-    for i in range(0, len(sl)-1):
-        if sl[i]==sl[i+1]:
-            d+=1
-    return d
+    deletions = 0
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            deletions += 1
+    return deletions
