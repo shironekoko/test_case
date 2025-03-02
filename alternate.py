@@ -23,5 +23,6 @@ def alternate(s):
                             break
                     else:
                         two.append(letter)
-            lens.append(len(two))
+            if len(two) > 1:
+                lens.append(len(two))
     return max(lens)
